@@ -9,5 +9,9 @@ public interface ICategoryService {
 
     List<Category> getAll();
 
+    Category findById(String id);
+
     Category create(Category category);
+
+    void remove(String id);
 }
