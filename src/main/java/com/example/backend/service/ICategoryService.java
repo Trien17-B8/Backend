@@ -1,5 +1,6 @@
 package com.example.backend.service;
 
+import com.example.backend.dto.request.CategoryRequest;
 import com.example.backend.models.Category;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +12,9 @@ public interface ICategoryService {
 
     Category findById(String id);
 
-    Category create(Category category);
+    Category create(CategoryRequest categoryRequest);
 
     void remove(String id);
+
+    Category update(String id, CategoryRequest categoryRequest);
 }
